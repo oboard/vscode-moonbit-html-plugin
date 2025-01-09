@@ -1,16 +1,22 @@
 {
   "scopeName": "text.html.moonbit",
+  "injectionSelector": "L:text.html.basic,L:text.html.vue,L:text.html.svelte",
   "patterns": [
     {
-      "begin": "(<)(script)(\\s+)(lang)(=)(\"mbt\")(>)",
+      "include": "#moonbit-script-content"
+    }
+  ],
+  "repository": {
+    "moonbit-script-content": {
+      "begin": "(<)(script)\\s+(?:(type|lang)\\s*(=)\\s*((['\"])(text\\/)?mbt\\6|(['\"])text\\/moonbit\\8))([^>]*)(>)",
       "beginCaptures": {
         "1": { "name": "punctuation.definition.tag.html" },
         "2": { "name": "entity.name.tag.script.html" },
-        "3": { "name": "whitespace.html" },
-        "4": { "name": "attribute.name.html" },
-        "5": { "name": "punctuation.separator.key-value.html" },
-        "6": { "name": "string.quoted.double.html" },
-        "7": { "name": "punctuation.definition.tag.html" }
+        "3": { "name": "entity.other.attribute-name.html" },
+        "4": { "name": "punctuation.separator.key-value.html" },
+        "5": { "name": "string.quoted.html" },
+        "9": { "name": "punctuation.definition.tag.html" },
+        "10": { "name": "punctuation.definition.tag.html" }
       },
       "end": "(</)(script)(>)",
       "endCaptures": {
@@ -25,5 +31,5 @@
         }
       ]
     }
-  ]
+  }
 } 
