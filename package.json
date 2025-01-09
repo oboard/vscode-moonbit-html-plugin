@@ -10,18 +10,6 @@
   "categories": [
     "Programming Languages"
   ],
-  "languages": [
-    {
-      "id": "moonbit",
-      "extensions": [".mbt"],
-      "configuration": "./language-configuration.json"
-    },
-    {
-      "id": "vue",
-      "extensions": [".vue"],
-      "configuration": "./language-configuration.json"
-    }
-  ],
   "activationEvents": [
     "onLanguage:html",
     "onLanguage:vue",
@@ -35,19 +23,14 @@
         "path": "./syntaxes/moonbit-html.tmLanguage.json",
         "scopeName": "text.html.moonbit",
         "embeddedLanguages": {
+          "meta.embedded.block.moonbit": "moonbit",
           "source.moonbit": "moonbit"
         },
         "injectTo": [
           "text.html.basic",
           "text.html.vue",
-          "text.html.svelte",
-          "text.html.astro"
+          "text.html.svelte"
         ]
-      },
-      {
-        "path": "./syntaxes/moonbit.tmLanguage.json",
-        "scopeName": "source.moonbit",
-        "language": "moonbit"
       }
     ]
   },

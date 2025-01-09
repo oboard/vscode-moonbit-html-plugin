@@ -8,23 +8,40 @@
   ],
   "repository": {
     "moonbit-script-content": {
-      "begin": "(<)(script)\\s+(?:(type|lang)\\s*(=)\\s*((['\"])(text\\/)?mbt\\6|(['\"])text\\/moonbit\\8))([^>]*)(>)",
+      "begin": "(<)(script)\\s+(lang)\\s*=\\s*([\"'])(mbt)\\4\\s*(>)",
       "beginCaptures": {
-        "1": { "name": "punctuation.definition.tag.html" },
-        "2": { "name": "entity.name.tag.script.html" },
-        "3": { "name": "entity.other.attribute-name.html" },
-        "4": { "name": "punctuation.separator.key-value.html" },
-        "5": { "name": "string.quoted.html" },
-        "9": { "name": "punctuation.definition.tag.html" },
-        "10": { "name": "punctuation.definition.tag.html" }
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.script.html"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html"
+        },
+        "4": {
+          "name": "punctuation.definition.string.begin.html"
+        },
+        "5": {
+          "name": "constant.language.typescript.html"
+        },
+        "6": {
+          "name": "punctuation.definition.tag.end.html"
+        }
       },
       "end": "(</)(script)(>)",
       "endCaptures": {
-        "1": { "name": "punctuation.definition.tag.html" },
-        "2": { "name": "entity.name.tag.script.html" },
-        "3": { "name": "punctuation.definition.tag.html" }
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.script.html"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.html"
+        }
       },
-      "contentName": "source.moonbit",
+      "contentName": "meta.embedded.block.moonbit",
       "patterns": [
         {
           "include": "source.moonbit"
@@ -32,4 +49,4 @@
       ]
     }
   }
-} 
+}
