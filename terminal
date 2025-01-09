@@ -1,0 +1,4 @@
+mkdir moonbit-html
+cd moonbit-html
+npm init -y
+npm install --save vscode 

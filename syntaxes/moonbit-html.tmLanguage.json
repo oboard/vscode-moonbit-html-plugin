@@ -1,0 +1,29 @@
+{
+  "scopeName": "text.html.moonbit",
+  "patterns": [
+    {
+      "begin": "(<)(script)(\\s+)(lang)(=)(\"mbt\")(>)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.html" },
+        "2": { "name": "entity.name.tag.script.html" },
+        "3": { "name": "whitespace.html" },
+        "4": { "name": "attribute.name.html" },
+        "5": { "name": "punctuation.separator.key-value.html" },
+        "6": { "name": "string.quoted.double.html" },
+        "7": { "name": "punctuation.definition.tag.html" }
+      },
+      "end": "(</)(script)(>)",
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.tag.html" },
+        "2": { "name": "entity.name.tag.script.html" },
+        "3": { "name": "punctuation.definition.tag.html" }
+      },
+      "contentName": "source.moonbit",
+      "patterns": [
+        {
+          "include": "source.moonbit"
+        }
+      ]
+    }
+  ]
+} 
